@@ -1,0 +1,82 @@
+<!-- Question for codepen community, for a css only solution, I had to put the input[type="checkbox"] as a sibling of the cards unordered list as I needed to be able to target the cards pricing whenever the switch changes it's value. Is there a cleaner way than this? I had consider setting a custom property called factor to be equal to 1, then when we check the input, set the factor to 100 and multiply the price by that. But to multiply, I need calc to support numbers which isnt available yet. -->
+<link rel="stylesheet" href="./style.css">
+<title>Price Tag</title>
+<main>
+    <h1>Our Pricing</h1>
+    <span class="toggle__label visually-hidden">Pricing Plan</span>
+    <span class="label-info">Annually</span>
+    <input type="checkbox" role="switch" class="toggle__element" id="toggle-element" />
+    <label class="toggle" for="toggle-element">
+      <div class="toggle__decor" aria-hidden="true">
+        <div class="toggle__thumb"></div>
+      </div>   
+    </label>
+    <span class="label-info">Monthly</span>
+    </div>
+     <div class="cards">
+       <div class="card">
+          <h2 class="card__tier">
+            Basic
+         </h2>
+         <p class="card__price" data-price="19.99" data-price-annually="199.99">
+           <span class="price__symbol">&dollar;</span></p>
+         <ul class="card__benefits">
+           <li>
+             <p>500 GB Storage</p>
+           </li>
+           <li>
+             <p>2 Users Allowed</p>
+           </li>
+           <li>
+             <p>Send up to 3 GB</p>
+           </li>
+         </ul>
+         <button>Learn More</button>
+       </div>
+       <div class="card">
+          <h2 class="card__tier">
+            Professional
+         </h2>
+         <p class="card__price" data-price="24.99"  data-price-annually="249.99">
+           <span class="price__symbol">&dollar;</span>
+         </p>
+         <ul class="card__benefits">
+           <li>
+             <p>1 TB Storage</p>
+           </li>
+           <li>
+             <p>5 Users Allowed</p>
+           </li>
+           <li>
+             <p>Send up to 10 GB</p>
+           </li>
+         </ul>
+         <button><span>Learn More</span></button>
+       </div>
+       <div class="card">
+          <h2 class="card__tier">
+            Master
+         </h2>
+         <p class="card__price" data-price="39.99"  data-price-annually="399.99">
+           <span class="price__symbol">&dollar;</span>
+         </p>
+         <ul class="card__benefits">
+           <li>
+             <p>2 TB Storage</p>
+           </li>
+           <li>
+             <p>10 Users Allowed</p>
+           </li>
+           <li>
+             <p>Send up to 20 GB</p>
+           </li>
+         </ul>
+         <button>Learn More</button>
+       </div>
+    </div>  
+  </main>
+  <footer class="visually-hidden">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://codepen.io/garyb1">Gary Byrne</a>.
+  </footer>
+   
